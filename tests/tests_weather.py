@@ -42,10 +42,13 @@ class WeatherAppBaseViewTestCase(TestCase):
         return path
 
 
-class IndexViewTestCase(WeatherAppBaseViewTestCase):
+class IndexViewBaseTestCase(WeatherAppBaseViewTestCase):
     REQUEST_URL = reverse('index')
     fixtures = ['weatherapp-testdata.json']
     _mocked_method_name = 'get_current_weather_data'
+
+
+class IndexViewTestCase(IndexViewBaseTestCase):
 
     def test_requestIsSuccessful(self):
         user = self.login_user(username='Gevorji')
@@ -68,7 +71,7 @@ class IndexViewTestCase(WeatherAppBaseViewTestCase):
         self.assertTemplateUsed(response, 'weather/guest_index.html')
 
 
-class IndexViewPaginationTest(IndexViewTestCase):
+class IndexViewPaginationTest(IndexViewBaseTestCase):
 
     def setUp(self) -> None:
         super().setUp()
