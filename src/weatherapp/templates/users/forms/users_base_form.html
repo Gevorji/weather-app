@@ -1,0 +1,17 @@
+{% for field in form %}
+    <div class="mb-3 mt-3">
+        {% if field.errors %}
+            <ul>
+                {% for err in field.errors %}
+                    <strong class="text-danger">{{ err }}</strong>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <div class="pb-2">{{ field.label_tag }}</div> {{ field }}
+        {% if field.help_text %}
+          <div class="help" id="{{ field.auto_id }}_helptext" style="font-size: 0.8rem">
+            {{ field.help_text|safe }}
+          </div>
+        {% endif %}
+    </div>
+{% endfor %}

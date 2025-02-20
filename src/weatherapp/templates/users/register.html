@@ -1,0 +1,9 @@
+{% extends 'base_auth.html' %}
+{% block title %}{{ 'Weather - Register' }}{% endblock %}
+{% block form_action %}{% url 'users:register' %}{% endblock %}
+{% block form_method %}{{ 'post' }}{% endblock %}
+{% block form_content %}
+        {% csrf_token %}
+        {{ form }}
+{% endblock %}
+{% block form_submit_value %}{{ 'Register me' }}{% endblock %}

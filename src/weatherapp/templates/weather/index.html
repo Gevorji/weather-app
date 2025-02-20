@@ -1,0 +1,48 @@
+{% extends 'weather/weather_base.html' %}
+{% load static %}
+{% block page_content %}
+    <section class="container pt-5 gap-3 d-flex flex-column align-items-center">
+        <form action="{% url 'weather:locations' %}" role="search" class="d-flex w-50"> <!--TODO: set width to 75-100 on small devices-->
+            {{ location_search_form }}
+        </form>
+    {% if messages %}
+    <div>
+    {% for msg in messages %}
+        <!--TODO: look for a way to remove markers from ul-->
+        <ul {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{ msg }}
+        </ul>
+    {% endfor %}
+    </div>
+    {% endif %}
+    <div class="d-flex flex-column">
+        {% for location, weather in locations_weather %}
+        <table>
+            <tr>
+                <td class="align-top">
+                    <img src="{% static 'weather_icons/' %}{{ weather.weather_icon }}.png" class="d-inline-block">
+                    {{ weather.weather_description }}
+                </td>
+                <td class="align-top">
+                <img src="{% static 'country_flags/' %}{{ location.country }}.svg" class="d-inline-block">
+                {{ location.name }}<br>
+                {{ location.latitude }} {{ location.longitude }}
+                <!-- TODO: add date record -->
+                </td>
+            </tr>
+            <tr>
+                <p class="fs-2">{{ weather.main_temperature }} &degC</p>
+            </tr>
+            <tr>
+                <td>
+                    Pressure: {{ weather.main_pressure }}<br>
+                    Humidity: {{ weather.main_humidity }}<br>
+                    Wind speed: {{ weather.wind_speed }}
+                </td>
+
+            </tr>
+        </table>
+        {% endfor %}
+    </div>
+    </section>
+{% endblock %}
