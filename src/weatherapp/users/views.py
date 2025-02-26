@@ -1,7 +1,10 @@
+import logging
+
 from django.shortcuts import render
 from django.contrib.auth.views import LoginView, LogoutView
 from weatherapp.users.forms import UserCreationForm, AuthenticationForm
 from django.http import HttpResponse, HttpResponseRedirect
+logger = logging.getLogger(__name__)
 
 
 def register_user(request):
@@ -17,8 +20,12 @@ def register_user(request):
             form.full_clean()
             form.save()
             return HttpResponse(f'Yo\'ve been successfuly registered, {form.instance.username}!')
+            logger.info('Registered user %s', form.instance.username)
         else:
             context['form'] = form
+            username = request.POST.get('username')
+            logger.info('Unsuccessful registration for user %s', username)
+            logger.debug('Errors on registration for user %s: %s', username, form.errors)
             return render(request, tmplt_path, context)
 
 
@@ -27,6 +34,18 @@ class LoginUser(LoginView):
     authentication_form = AuthenticationForm
     next_page = '/'
 
+    def form_valid(self, form):
+        logger.info('Logged in user %s', form.cleaned_data['username'])
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        logger.info('Unsuccessful login attempt for user %s', form.data.get('username'))
+        logger.debug('Errors on login attempt for user %s: %s', form.data.get('username'), form.errors)
+        return super().form_invalid(form)
 
 class LogoutUser(LogoutView):
     next_page = '/'
+
+    def post(self, request, *args, **kwargs):
+        logger.info('Logged out user %s', request.user.username)
+        return super().post(request, *args, **kwargs)
