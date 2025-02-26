@@ -21,7 +21,6 @@ def register_user(request):
         if form.is_valid():
             form.full_clean()
             form.save()
-            return HttpResponse(f'Yo\'ve been successfuly registered, {form.instance.username}!')
             logger.info('Registered user %s', form.instance.username)
             login(request, form.instance)
             return HttpResponseRedirect(reverse('index'))
