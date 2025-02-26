@@ -2,6 +2,7 @@ import logging
 
 from django.shortcuts import render
 from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth import login
 from weatherapp.users.forms import UserCreationForm, AuthenticationForm
 from django.urls import reverse
 from django.http import HttpResponseRedirect
@@ -22,6 +23,7 @@ def register_user(request):
             form.save()
             return HttpResponse(f'Yo\'ve been successfuly registered, {form.instance.username}!')
             logger.info('Registered user %s', form.instance.username)
+            login(request, form.instance)
             return HttpResponseRedirect(reverse('index'))
         else:
             context['form'] = form
