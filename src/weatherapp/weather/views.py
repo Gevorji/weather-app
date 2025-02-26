@@ -83,7 +83,6 @@ class LocationsView(LoginRequiredMixin, View):
                     'locations_list': [], 'location_search_form': self.location_search_form
                 }
             )
-
         try:
             ldtos = openweathermap.get_locations_by_name(lname)
         except OpenweathermapApiHTTPResponseError:
@@ -94,7 +93,10 @@ class LocationsView(LoginRequiredMixin, View):
         db_locations_list = list(Location.objects.filter(name__icontains=lname))
 
         api_locations_list = [
-            Location(name=dto.name, latitude=dto.latitude, longitude=dto.longitude, local_names=dto.local_names)
+            Location(
+                name=dto.name, latitude=dto.latitude, longitude=dto.longitude,
+                local_names=dto.local_names, country=dto.country
+            )
             for dto in ldtos
             if (lati_rounder(dto.latitude), longi_rounder(dto.longitude))
             not in [(lati_rounder(loc.latitude), longi_rounder(loc.longitude)) for loc in db_locations_list]
@@ -113,7 +115,9 @@ class LocationsView(LoginRequiredMixin, View):
                 lmodel.save()
 
         request.session['lately_requested_locations'] = [
-            m.id if m.id is not None else model_to_dict(m, fields=['name', 'latitude', 'longitude', 'local_names'])
+            m.id if m.id is not None else model_to_dict(
+                m, fields=['name', 'latitude', 'longitude', 'local_names', 'country']
+            )
             for m in locations_list
         ]
         # TODO: add pagination into locations layout
