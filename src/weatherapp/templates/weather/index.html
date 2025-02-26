@@ -24,7 +24,7 @@
                     {{ weather.weather_description }}
                 </td>
                 <td class="align-top">
-                <img src="{% static 'country_flags/' %}{{ location.country }}.svg" class="d-inline-block">
+                <img src="{% static 'country_flags/' %}{{ location.country|lower }}.svg" class="d-inline-block">
                 {{ location.name }}<br>
                 {{ location.latitude }} {{ location.longitude }}
                 <!-- TODO: add date record -->
