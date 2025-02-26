@@ -120,7 +120,6 @@ class LocationsView(LoginRequiredMixin, View):
             )
             for m in locations_list
         ]
-        # TODO: add pagination into locations layout
         return render(
             request, 'weather/locations.html', {
                 'locations_list': locations_list, 'location_search_form': self.location_search_form
