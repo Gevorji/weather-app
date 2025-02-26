@@ -152,8 +152,8 @@ class LocationsView(LoginRequiredMixin, View):
                 logger.info(
                     'User %s added location %s (id %s, %s, lat: %s, lon: %s)',
                     request.user.username, selected_location_model.name,
-                    selected_location.id, selected_location.country,
-                    selected_location_model.latitude, selected_location.longitude,
+                    selected_location_model.id, selected_location_model.country,
+                    selected_location_model.latitude, selected_location_model.longitude,
                 )
         finally:
             with contextlib.suppress(KeyError):
