@@ -38,7 +38,7 @@ class Location(models.Model):
         blank=False, validators=[get_max_min_value_validator(-180, 180, include_max=True, include_min=True)]
     )
     local_names = models.JSONField(default=dict)
-    country = models.CharField(max_length=10, null=True)
+    country = models.CharField(max_length=30, null=True)
 
 
 class UserLocation(models.Model):
