@@ -4,6 +4,7 @@
 {% block form_method %}{{ 'post' }}{% endblock %}
 {% block form_content %}
         {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
         {{ form }}
 {% endblock %}
 {% block form_submit_value %}{{ 'Login' }}{% endblock %}
