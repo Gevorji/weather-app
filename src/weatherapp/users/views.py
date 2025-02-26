@@ -3,7 +3,8 @@ import logging
 from django.shortcuts import render
 from django.contrib.auth.views import LoginView, LogoutView
 from weatherapp.users.forms import UserCreationForm, AuthenticationForm
-from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 logger = logging.getLogger(__name__)
 
 
@@ -12,7 +13,7 @@ def register_user(request):
     tmplt_path = 'users/register.html'
     if request.method == 'GET':
         if request.user.is_authenticated:
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect(reverse('index'))
         return render(request, tmplt_path, context)
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -21,6 +22,7 @@ def register_user(request):
             form.save()
             return HttpResponse(f'Yo\'ve been successfuly registered, {form.instance.username}!')
             logger.info('Registered user %s', form.instance.username)
+            return HttpResponseRedirect(reverse('index'))
         else:
             context['form'] = form
             username = request.POST.get('username')
