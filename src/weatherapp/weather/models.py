@@ -37,7 +37,7 @@ class Location(models.Model):
     longitude = models.FloatField(
         blank=False, validators=[get_max_min_value_validator(-180, 180, include_max=True, include_min=True)]
     )
-    local_names = models.JSONField(default=dict)
+    local_names = models.JSONField(null=True, blank=True)
     country = models.CharField(max_length=30, null=True)
 
 
