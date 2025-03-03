@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Weather - {% block title_err_msg %}{% endblock %}{% endblock %}
+{% block body %}
+	<div class="container-fluid d-flex flex-column align-items-center justify-content-center">
+        <div style="max-width: 400px">
+            <img src="{% static 'error_icon.png' %}" class="img-responsive">
+        </div>
+        <div class="fs-1">
+            Oops! An error occurred.
+        </div>
+        <div class="fs-2">{% block body_err_msg %}{% endblock %}</div>
+        <div>
+            <a class="fs-3 primary-link" href="{% url 'index' %}">Get back to main page</a>
+        </div>
+    </div>
+{% endblock %}
