@@ -9,6 +9,12 @@
         {% include 'includes/messages-block.html' %}
     {% endif %}
     <div class="container-sm d-flex flex-column align-items-center" style="max-width: 600px">
+        <div class="py-3">
+            {% with page=locations_page %}
+                {% include 'includes/pagination-block.html' %}
+            {% endwith %}
+        </div>
+        <div class="fs-2 mb-3">Your locations</div>
         {% for location, weather in locations_weather %}
         <table class="w-100" style="max-width: 450px">
             <tr>
