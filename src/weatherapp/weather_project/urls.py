@@ -19,8 +19,6 @@ from django.urls import path, include
 from weatherapp.weather.views import IndexView
 
 
-# app_name = 'weather_project'
-
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('admin/', admin.site.urls),
