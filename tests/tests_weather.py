@@ -57,7 +57,7 @@ class IndexViewTestCase(IndexViewBaseTestCase):
         ctxt = response.context
 
         self.assertEqual(response.status_code, 200)
-        self.assertQuerySetEqual(
+        self.assertCountEqual(
             Location.objects.filter(
                 users=user
             ).annotate(
