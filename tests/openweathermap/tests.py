@@ -22,8 +22,6 @@ from weatherapp.external_services.openweathermap.errors import (OpenweathermapAp
 
 reload(openweathermap)
 
-print(openweathermap.settings.OPENWEATHERMAP_CURRENTWEATHERDATA_API_URL)
-
 response_fixtures = json.load(open(tests_dir / 'response-fixtures.json', 'rb'))
 
 config = {**dotenv_values('.env'), **dotenv_values('.env.test'), **os.environ}
