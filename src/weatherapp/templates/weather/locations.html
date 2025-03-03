@@ -7,17 +7,7 @@
             {{ location_search_form }}
         </form>
     {% if messages %}
-        <div class="d-flex align-items-center border border-secondary rounded bg-light text-dark w-75">
-            <ul class="wthr-msgs-ul">
-                {% for msg in messages %}
-                    <li {% if message.tags %}
-                            class="{% for tag in message.tags %}wthr-msg-tag-{{ tag }}{% endfor %}"
-                        {% endif %}>
-                        {{ msg }}
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
+        {% include 'includes/messages-block.html' %}
     {% endif %}
     <div class="d-flex flex-column w-75" style="min-height: 200px">
         {% if locations_list %}

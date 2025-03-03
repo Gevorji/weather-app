@@ -6,14 +6,7 @@
             {{ location_search_form }}
         </form>
     {% if messages %}
-    <div>
-    {% for msg in messages %}
-        <!--TODO: look for a way to remove markers from ul-->
-        <ul {% if message.tags %} class="{{ message.tags }}"{% endif %}>
-            {{ msg }}
-        </ul>
-    {% endfor %}
-    </div>
+        {% include 'includes/messages-block.html' %}
     {% endif %}
     <div class="d-flex flex-column">
         {% for location, weather in locations_weather %}
