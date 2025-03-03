@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center border border-secondary rounded bg-light text-dark w-75" style="min-height: 40px">
+<ul class="wthr-msgs-ul mb-0">
+    {% for msg in messages %}
+        <li {% if message.tags %}
+                class="{% for tag in message.tags %}wthr-msg-tag-{{ tag }}{% endfor %}"
+            {% endif %}>
+            {{ msg }}
+        </li>
+    {% endfor %}
+</ul>
+</div>
