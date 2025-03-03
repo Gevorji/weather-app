@@ -271,7 +271,7 @@ class LocationRemoveView(WeatherAppBaseViewTestCase):
                     response = self.client.post(self.REQUEST_URL)
                 else:
                     response = self.client.post(self.REQUEST_URL, {'id': _id})
-                self.assertEquals(response.status_code, 400)
+                self.assertEqual(response.status_code, 400)
 
     def test_raisesHttp404OnNonExistingUserLocation(self):
         user = self.login_user(username='Gevorji')
