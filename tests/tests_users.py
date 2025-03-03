@@ -47,7 +47,7 @@ class RegisterUserViewTest(TestCase):
             self.REQUEST_PATH, {'username': 'JohnDoe', 'password1': pswd, 'password2': pswd}
         )
 
-        self.assertEqual(resp.status_code, 200)
+        self.assertRedirects(resp, reverse('index'))
         self.assertIsNotNone(User.objects.get(username='JohnDoe'))
 
     def test_userRegistrationUnsuccessfulWhenUsernameExists(self):
