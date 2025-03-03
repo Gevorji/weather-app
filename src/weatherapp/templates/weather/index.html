@@ -14,8 +14,11 @@
         <table class="w-100" style="max-width: 450px">
             <tr>
                 <td class="align-top">
-                    <img src="{% static 'weather_icons/' %}{{ weather.weather_icon }}.png" class="d-inline-block">
                     <div class="fs-2">{{ weather.main_temperature|floatformat:1 }} &degC</div>
+                    <img 
+                            src="{% static 'weather_icons/' %}{{ weather.weather_icon }}.png" class="d-inline-block"
+                            width="40" height="40"
+                    >
                     {{ weather.weather_description }}
                 </td>
                 <td class="align-top">
