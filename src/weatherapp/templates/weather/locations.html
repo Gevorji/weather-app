@@ -36,15 +36,15 @@
                 </div>
                 {% if not forloop.last %}<hr>{% endif %}
             {% endfor %}
-        <div style="text-align: center">
-            <span style="text-align: center">
-                {% elif not request.GET and not request.method == 'POST' %}
+        {% else %}    
+            <div style="text-align: center">
+                {% if not request.GET and not request.method == 'POST' %}
                     Enter and submit location that you are interested in
                 {% else %}
                     No locations were found
                 {% endif %}
-            </span>
-        </div>
+            </div>
+        {% endif %}
     </div>
     </section>
 {% endblock %}
