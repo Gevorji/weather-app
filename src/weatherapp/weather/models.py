@@ -40,6 +40,9 @@ class Location(models.Model):
     local_names = models.JSONField(null=True, blank=True)
     country = models.CharField(max_length=30, null=True)
 
+    def __str__(self):
+        return f'{self.name}, {lati_rounder(self.latitude)}, {longi_rounder(self.longitude)}, {self.country}'
+
 
 class UserLocation(models.Model):
 
