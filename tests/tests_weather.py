@@ -263,7 +263,7 @@ class LocationRemoveView(WeatherAppBaseViewTestCase):
 
         self.assertRedirects(response, reverse('users:login'))
 
-    def test_respondsWith400OnRequestWithoutOrWithWrongUserLocationId(self):
+    def test_respondsWith400RequestWithoutOrWithWrongUserLocationId(self):
         user = self.login_user(username='Gevorji')
         for _id in ('', 'a'):
             with self.subTest(_id=_id):
