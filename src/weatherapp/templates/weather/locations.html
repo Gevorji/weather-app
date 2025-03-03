@@ -13,8 +13,12 @@
         {% if locations_list %}
             {% for location in locations_list %}
                 <div class="d-flex flex-row justify-content-center">
-                    <div class="w-10 ">
-                        <img class="px-4" src="{% static 'country_flags/' %}{{ location.country|lower }}.svg">
+                    <div class="d-flex align-items-center align-content-center">
+                        <img 
+                                class="px-4 d-inline" 
+                                src="{% static 'country_flags/' %}{{ location.country|lower }}.svg"
+                                width="96" height="36"
+                        >
                     </div>
                     <div class="w-25">
                         {{ location.name }}<br>
