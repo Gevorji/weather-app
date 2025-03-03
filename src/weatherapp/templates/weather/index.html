@@ -46,7 +46,13 @@
                     &#x1F4A7 Humidity: {{ weather.main_humidity }}%<br>
                     &#x1F32C Wind speed: {{ weather.wind_speed|floatformat:1 }} m/sec
                 </td>
-
+                <td class="align-bottom" style="text-align: right">
+                    <form action="{% url 'weather:locations-remove' %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="id" value="{{ location.id }}">
+                        <input type="submit" class="btn btn-outline-danger" value="Remove">
+                    </form>
+                </td>
             </tr>
         </table>
         {% endfor %}
