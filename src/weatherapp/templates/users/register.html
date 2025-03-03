@@ -1,5 +1,8 @@
 {% extends 'users/base_auth.html' %}
 {% block title %}{{ 'Weather - Register' }}{% endblock %}
+{% block welcoming_txt %}
+	Please become a user of this app by filling in and sending the form below
+{% endblock %}
 {% block form_action %}{% url 'users:register' %}{% endblock %}
 {% block form_method %}{{ 'post' }}{% endblock %}
 {% block form_content %}
