@@ -35,7 +35,6 @@ class CurrentWeatherDto(DtoBase):
     main_pressure_sea_level: float = field(init=False, default=None)
     main_pressure_grnd_level: float = field(init=False, default=None)
     main_humidity: float = field(init=False, default=None)
-    visibility: int
     wind: InitVar[dict]
     wind_speed: float = field(init=False, default=None)
     wind_deg: float = field(init=False, default=None)
@@ -58,6 +57,7 @@ class CurrentWeatherDto(DtoBase):
     snow_1h: float = field(init=False, default=None)
     rain: Optional[InitVar[dict]] = None
     snow: Optional[InitVar[dict]] = None
+    visibility: Optional[int] = None
 
     def __post_init__(self, coord: dict, weather: dict, main: dict, wind: dict, clouds: dict, sys: dict):
         weather = weather[0]
