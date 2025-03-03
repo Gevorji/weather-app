@@ -17,7 +17,8 @@ os.environ.update(dotenv_values(str(tests_dir / '.env.test')))
 from weatherapp.external_services import openweathermap
 from weatherapp.external_services.openweathermap.currentweatherdata.responsedto import CurrentWeatherDto
 from weatherapp.external_services.openweathermap.geocodingapi.responsedto import GeocodingLocationDto
-from weatherapp.external_services.openweathermap.errors import OpenweathermapApiHTTPResponseError
+from weatherapp.external_services.openweathermap.errors import (OpenweathermapApiHTTPResponseError,
+                                                                OpenWeathermapApiConnectionTimeoutError)
 
 reload(openweathermap)
 
@@ -72,6 +73,11 @@ class BaseOpenweathermapApiTestCase(TestCase):
         self.assertEqual(client_exc.phrase, exc.reason)
         self.mock_requester.reset_mock(side_effect=True)
 
+    def do_requester_timeout_base_test(self, api_caller, args, kwargs):
+        self.mock_requester.configure_mock(side_effect=TimeoutError)
+        with self.assertRaises(OpenWeathermapApiConnectionTimeoutError):
+            api_caller(*args, **kwargs)
+
 
 class CurrentWeatherDataApiTestWithStlibRequestClientTest(BaseOpenweathermapApiTestCase):
 
@@ -105,6 +111,10 @@ class CurrentWeatherDataApiTestWithStlibRequestClientTest(BaseOpenweathermapApiT
             )
         )
 
+    def test_requestClientGotConnectionTimeoutError(self):
+        self.do_requester_timeout_base_test(
+            openweathermap.get_current_weather_data, args=tuple(), kwargs=self.call_params
+        )
 
 class GeocodingApiWithStlibRequestClientTest(BaseOpenweathermapApiTestCase):
 
@@ -131,6 +141,11 @@ class GeocodingApiWithStlibRequestClientTest(BaseOpenweathermapApiTestCase):
             exc=HTTPError(
                 code=500, msg='Internal server error', fp=BytesIO(b''), hdrs=[], url=''
             )
+        )
+
+    def test_requestClientGotConnectionTimeoutError(self):
+        self.do_requester_timeout_base_test(
+            openweathermap.get_locations_by_name, args=tuple(), kwargs=self.call_params
         )
 
 

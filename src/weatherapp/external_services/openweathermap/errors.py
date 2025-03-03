@@ -6,4 +6,5 @@ class OpenweathermapApiHTTPResponseError(OpenweathermapApiError):
         self.phrase = phrase
         self.code = code
 
-
+class OpenWeathermapApiConnectionTimeoutError(OpenweathermapApiError):
+    pass
