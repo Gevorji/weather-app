@@ -3,7 +3,7 @@
 {% block title %}Locations Search{% endblock %}
 {% block page_content %}
     <section class="container pt-5 gap-3 d-flex flex-column align-items-center">
-        <form action="{% url 'weather:locations' %}" role="search" class="d-flex container-sm">
+        <form action="{% url 'weather:locations' %}" role="search" class="d-flex container-sm" style="max-width: 800px">
             {{ location_search_form }}
         </form>
     {% if messages %}

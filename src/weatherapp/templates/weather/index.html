@@ -2,7 +2,7 @@
 {% load static %}
 {% block page_content %}
     <section class="container pt-5 gap-3 d-flex flex-column align-items-center">
-        <form action="{% url 'weather:locations' %}" role="search" class="d-flex w-50"> <!--TODO: set width to 75-100 on small devices-->
+        <form action="{% url 'weather:locations' %}" role="search" class="d-flex container-sm" style="max-width: 800px">
             {{ location_search_form }}
         </form>
     {% if messages %}
