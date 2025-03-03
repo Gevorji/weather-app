@@ -26,11 +26,18 @@
                     >
                     {{ weather.weather_description }}
                 </td>
-                <td class="align-top">
-                <img src="{% static 'country_flags/' %}{{ location.country|lower }}.svg" class="d-inline-block">
-                {{ location.name }}<br>
-                {{ location.latitude }} {{ location.longitude }}
-                <!-- TODO: add date record -->
+                <td class="align-top pt-2" style="text-align: right">
+                    <span class="fs-3 lh-2 align-middle">
+                        <img 
+                            src="{% static 'country_flags/' %}{{ location.country|lower }}.svg" class="d-inline-block"
+                            width="30" height="21"
+                        >
+                        {{ location.name }}<br>
+                    </span> 
+                    &#x1F310 {{ location.latitude|floatformat:4 }}, {{ location.longitude|floatformat:4 }}<br>
+                    <span style="font-size: 0.8rem">
+                        As of {{ weather.current_time|date:'d.m.Y' }}
+                    </span>
                 </td>
             </tr>
             <tr>
