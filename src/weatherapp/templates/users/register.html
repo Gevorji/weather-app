@@ -1,0 +1,32 @@
+{% extends 'users/base_auth.html' %}
+{% block title %}{{ 'Weather - Register' }}{% endblock %}
+{% block welcoming_txt %}
+	Please become a user of this app by filling in and sending the form below
+{% endblock %}
+{% block form_action %}{% url 'users:register' %}{% endblock %}
+{% block form_method %}{{ 'post' }}{% endblock %}
+{% block form_content %}
+        {% csrf_token %}
+        {{ form }}
+{% endblock %}
+{% block form_help %}
+	<button 
+                class="btn btn-secondary ms-2" data-bs-toggle="collapse" 
+                href="#collapseFormHelp" role="button" 
+                aria-expanded="false" aria-controls="collapseFormHelp"
+                >Get help</button>
+        <div class="collapse" id="collapseFormHelp">
+            <div class="card card-body my-2">
+                <ul>
+                    {% for field in form %}
+                        {% if field.help_text %}
+                          <li>
+                            {{ field.label }}: {{ field.help_text|safe }}
+                          </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+{% endblock %}
+{% block form_submit_value %}{{ 'Register me' }}{% endblock %}

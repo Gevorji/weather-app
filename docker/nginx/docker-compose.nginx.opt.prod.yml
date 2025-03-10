@@ -1,0 +1,21 @@
+services:
+  weatherapp:
+    ports: !reset []
+    expose:
+      - '8000'
+    volumes:
+      - weatherapp_static_content:/home/django_app/weatherapp/static
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.nginx
+    volumes:
+     - weatherapp_static_content:/home/django_app/weatherapp/static
+    ports:
+      - '3035:80'
+    depends_on:
+      - weatherapp
+
+
+

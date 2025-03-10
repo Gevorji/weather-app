@@ -1,0 +1,68 @@
+{% extends 'weather/weather_base.html' %}
+{% load static %}
+{% block page_content %}
+    <section class="container pt-5 gap-3 d-flex flex-column align-items-center">
+        <form action="{% url 'weather:locations' %}" role="search" class="d-flex container-sm" style="max-width: 800px">
+            {{ location_search_form }}
+        </form>
+    {% if messages %}
+        {% include 'includes/messages-block.html' %}
+    {% endif %}
+    <div class="container-sm d-flex flex-column align-items-center" style="max-width: 600px; min-height: 500px">
+        {% if locations_weather %}
+            <div class="py-3">
+                {% with page=locations_page %}
+                    {% include 'includes/pagination-block.html' %}
+                {% endwith %}
+            </div>
+            <div class="fs-2 mb-3">Your locations</div>
+            {% for location, weather in locations_weather %}
+            <table class="w-100" style="max-width: 450px">
+                <tr>
+                    <td class="align-top">
+                        <div class="fs-2">{{ weather.main_temperature|floatformat:1 }} &degC</div>
+                        <img 
+                                src="{% static 'weather_icons/' %}{{ weather.weather_icon }}.png" class="d-inline-block"
+                                width="40" height="40"
+                        >
+                        {{ weather.weather_description }}
+                    </td>
+                    <td class="align-top pt-2" style="text-align: right">
+                        <span class="fs-3 lh-2 align-middle">
+                            <img 
+                                src="{% static 'country_flags/' %}{{ location.country|lower }}.svg" class="d-inline-block"
+                                width="30" height="21"
+                            >
+                            {{ location.name }}<br>
+                        </span> 
+                        &#x1F310 {{ location.latitude|floatformat:4 }}, {{ location.longitude|floatformat:4 }}<br>
+                        <span style="font-size: 0.8rem">
+                            As of {{ weather.current_time|date:'d.m.Y' }}
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &#x1F321 Pressure: {{ weather.main_pressure }} hPa<br>
+                        &#x1F4A7 Humidity: {{ weather.main_humidity }}%<br>
+                        &#x1F32C Wind speed: {{ weather.wind_speed|floatformat:1 }} m/sec
+                    </td>
+                    <td class="align-bottom" style="text-align: right">
+                        <form action="{% url 'weather:locations-remove' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{ location.id }}">
+                            <input type="submit" class="btn btn-outline-danger" value="Remove">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+            <div class="w-100">{% if not forloop.last %}<hr>{% endif %}</div>
+            {% endfor %}
+        {% else %}
+            <div class="d-flex align-items-center justify-content-center flex-grow-1">
+                You have no added locations yet
+            </div>
+        {% endif %}
+    </div>
+    </section>
+{% endblock %}

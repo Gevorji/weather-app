@@ -1,0 +1,23 @@
+<nav aria-label="Page navigation">
+     <ul class="pagination">
+         <li class="page-item{% if not page.has_previous %} disabled{% endif %}">
+             
+                <a 
+                        href="{% if page.has_previous %}{% url 'index' %}?page={{ page.previous_page_number}}{% else %}#{% endif %}" 
+                        class="page-link"
+                >Previous</a>
+         </li>
+         {% for page_num in page.paginator.page_range %}
+            <li class="page-item{% if page_num == page.number %} active{% endif %}">
+                <a href="{% url 'index' %}?page={{ page_num }}" class="page-link">{{ page_num }}</a>
+            </li>
+         {% endfor %}   
+         <li class="page-item{% if not page.has_next %} disabled{% endif %}">
+            <a 
+                    href="{% if page.has_next %}{% url 'index' %}?page={{ page.next_page_number}}{% else %}#{% endif %}" 
+                    class="page-link"
+            >
+                Next</a>
+         </li>
+     </ul>
+</nav>

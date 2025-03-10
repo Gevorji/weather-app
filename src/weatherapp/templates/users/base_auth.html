@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<header class="container border-bottom border-1 my-3">
+    <h1 style="text-align: center">Weather</h1>
+</header>
+    {% block form_section %}
+        <form action="{% block form_action %}{% endblock %}" class="mx-auto pt-3 w-75" style="max-width: 400px" method="{% block form_method %}{% endblock %}">
+        <h2 class="fs-5" style="min-width: 300px">{% block welcoming_txt %}{% endblock %}</h2>
+        {% csrf_token %}
+        {% block form_content %}{% endblock %}
+        <input type="submit" class="btn btn-primary" style="width: 110px" value="{% block form_submit_value %}{% endblock %}">
+        {% block form_help %}{% endblock %}
+        </form>
+    {% endblock form_section %}
+{% endblock %}

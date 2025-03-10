@@ -1,0 +1,15 @@
+{% extends 'users/base_auth.html' %}
+{% block title %}{{ 'Weather - Login' }}{% endblock %}
+{% block welcoming_txt %}
+	Hello! Please log in to continue
+    <br>If you have no account yet, <a class="primary-link" href="{% url 'users:register' %}">create it</a>
+{% endblock %}
+{% block form_action %}{% url 'users:login' %}{% endblock %}
+{% block form_method %}{{ 'post' }}{% endblock %}
+{% block form_content %}
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {{ form }}
+{% endblock %}
+{% block form_submit_value %}{{ 'Login' }}{% endblock %}
+

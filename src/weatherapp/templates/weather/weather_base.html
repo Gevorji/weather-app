@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="container d-flex pt-8">
+    <header class="container d-flex py-3 border-bottom border-1">
+        <div class="w-50 align-middle" style="text-align: left">
+            <a href="{% url 'index' %}"><img class="d-inline-block" src="{% static 'logo.png' %}" width="80" height="80"></a>
+            <h1 class="d-inline-block">Weather</h1>
+        </div>
+        <div class="w-50 d-flex justify-content-end align-items-end">
+        {% with user=request.user %}
+            {% if user.is_authenticated %}
+                <img src="{% static 'user-icon.png' %}" width="29" height="20" class="d-inline-block pe-2">{{ user.username }}
+                |
+                <form action="{% url 'users:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link border-0 p-0 ps-2 align-bottom">Logout</button>
+                </form>
+            {% endif %}
+        {% endwith %}
+        </div>
+    </header>
+    </div>
+    {% block page_content %}
+    {% endblock %}
+    </div>
+{% endblock %}

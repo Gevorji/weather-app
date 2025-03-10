@@ -1,0 +1,1461 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add location",
+      "content_type": 7,
+      "codename": "add_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change location",
+      "content_type": 7,
+      "codename": "change_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete location",
+      "content_type": 7,
+      "codename": "delete_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view location",
+      "content_type": 7,
+      "codename": "view_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add user location",
+      "content_type": 8,
+      "codename": "add_userlocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change user location",
+      "content_type": 8,
+      "codename": "change_userlocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete user location",
+      "content_type": 8,
+      "codename": "delete_userlocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view user location",
+      "content_type": 8,
+      "codename": "view_userlocation"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$shhqoXvYGT4l2H6wtNLBop$cRAs+pw4lbo1QcpCmL9V9lwqiTXaZhLsV/Erqg8cXJc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Bibur",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-30T10:07:24.584Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$VzaBO1HMaCNChEaWszakfy$kxSLvAS5nWh/Xbs3oaTELd2NocRt1S/if50NByyqjuM=",
+      "last_login": "2024-12-01T13:00:21.296Z",
+      "is_superuser": false,
+      "username": "Frodo",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-30T19:44:51.085Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$01H4vGn9YzXJP1aZI2DUkP$YAAgrGRaeTf/YNUa+GunsMArtv62N71Yt9Mysor4u28=",
+      "last_login": "2025-02-08T10:24:31.826Z",
+      "is_superuser": false,
+      "username": "Gevorji",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-12-01T13:31:08.954Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$pBPLsWGUUdGxtX8onQalr4$5eP5m4a3t/HKbowcROuIWxRFWc3N5wZCdfTMv4lf9+c=",
+      "last_login": "2024-12-03T18:10:48.356Z",
+      "is_superuser": false,
+      "username": "Mitrandir",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-12-02T17:32:55.729Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "weather",
+      "model": "location"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "weather",
+      "model": "userlocation"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "45w0qm4gl3xcb68hj81vmya871hmiknt",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO1Xq9xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWkq7Mw0O_1uGfBBfQflDv02c5z7ukyZ7wo_6ODXudDzcrh_Bw1G-9ZobJEq1BgsauEsKGF8xOiq94rAkQiGQBslPaKpLgtZahZEUUeZC7H3B8zlN9o:1tgi0l:BsUACmCja4o7kYzcjG6npvfAmqSKeWldmL2l8_khaJo",
+      "expire_date": "2025-02-22T10:24:31.831Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "563921jqyzxwosorbr9xbyecvqlt22zu",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hCYFtpx6b5nIAMzStVAUtqV8e7apAvd_vfef6lA25rD1mQJM6uz6tTpd4uUHlJ2wHcqt6pTLesyR70r-qBNT5XleTncv4NMLX9rZEZnHUgERAPJkBBb8X7wI1zFeuQuGeZkbY8wWtdzjOQxDWwMgFHvD-HQN5c:1tZDmy:OppvLegIrj1dTXUakpFzviuJ6eWsTZiMCLOKh8FNpjA",
+      "expire_date": "2025-02-01T18:43:20.367Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "hp96yw40gqmo3pyf510oy52tx5ot0387",
+    "fields": {
+      "session_data": "e30:1tZC8E:wNmIeOxDsY6Tg8tCU5jO2GjLDfr5N1OY0MOcX7Jtj0M",
+      "expire_date": "2025-02-01T16:57:10.120Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "imnu5t4xzm4s580f2l6asu2rnlo15x71",
+    "fields": {
+      "session_data": "e30:1tZDNS:HcWEGWFZV0J0l-OjTqxpWrzq3ORyx1xZy8120t_e1XA",
+      "expire_date": "2025-02-01T18:16:58.011Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ub3o073ypp91c4af0dz1qzatpqqrlj7f",
+    "fields": {
+      "session_data": "e30:1tHjYj:jctZTi52SYeGF0w48MB2pkPZZNBLOAFmuKPB4__V7JY",
+      "expire_date": "2024-12-15T13:00:21.283Z"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 5,
+    "fields": {
+      "name": "Mozdok",
+      "latitude": 43.735584,
+      "longitude": 44.653614,
+      "local_names": {
+        "ar": "موزدوك",
+        "be": "Маздок",
+        "ca": "Mozdok",
+        "ce": "Мазалк",
+        "de": "Mosdok",
+        "en": "Mozdok",
+        "eo": "Mozdoko",
+        "es": "Mozdok",
+        "fa": "موزدوک",
+        "fi": "Mozdok",
+        "fr": "Mozdok",
+        "hy": "Մոզդոկ",
+        "id": "Mozdok",
+        "it": "Mozdok",
+        "ka": "მოზდოკი",
+        "ko": "모즈도크",
+        "lt": "Mozdokas",
+        "os": "Мæздæг",
+        "pl": "Mozdok",
+        "pt": "Mozdok",
+        "ru": "Моздок",
+        "sr": "Моздок",
+        "sv": "Mozdok",
+        "zh": "莫兹多克"
+      },
+      "country": null
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 6,
+    "fields": {
+      "name": "Moscow",
+      "latitude": 55.7504461,
+      "longitude": 37.6174943,
+      "local_names": {
+        "ab": "Москва",
+        "af": "Moskou",
+        "ak": "Moscow",
+        "am": "ሞስኮ",
+        "an": "Moscú",
+        "ar": "موسكو",
+        "av": "Москва",
+        "ay": "Mosku",
+        "az": "Moskva",
+        "ba": "Мәскәү",
+        "be": "Масква",
+        "bg": "Москва",
+        "bi": "Moskow",
+        "bn": "মস্কো",
+        "bo": "མོ་སི་ཁོ།",
+        "br": "Moskov",
+        "bs": "Moskva",
+        "ca": "Moscou",
+        "ce": "Москох",
+        "ch": "Moscow",
+        "co": "Moscù",
+        "cs": "Moskva",
+        "cu": "Москъва",
+        "cv": "Мускав",
+        "cy": "Moscfa",
+        "da": "Moskva",
+        "de": "Moskau",
+        "dv": "މޮސްކޯ",
+        "dz": "མོསི་ཀོ",
+        "el": "Μόσχα",
+        "en": "Moscow",
+        "eo": "Moskvo",
+        "es": "Moscú",
+        "et": "Moskva",
+        "eu": "Mosku",
+        "fa": "مسکو",
+        "fi": "Moskova",
+        "fo": "Moskva",
+        "fr": "Moscou",
+        "fy": "Moskou",
+        "ga": "Moscó",
+        "gd": "Moscobha",
+        "gl": "Moscova - Москва",
+        "gn": "Mosku",
+        "gv": "Moscow",
+        "he": "מוסקווה",
+        "hi": "मास्को",
+        "hr": "Moskva",
+        "ht": "Moskou",
+        "hu": "Moszkva",
+        "hy": "Մոսկվա",
+        "ia": "Moscova",
+        "id": "Moskwa",
+        "ie": "Moskwa",
+        "io": "Moskva",
+        "is": "Moskva",
+        "it": "Mosca",
+        "iu": "ᒨᔅᑯ",
+        "ja": "モスクワ",
+        "jv": "Moskwa",
+        "ka": "მოსკოვი",
+        "kg": "Moskva",
+        "kk": "Мәскеу",
+        "kl": "Moskva",
+        "kn": "ಮಾಸ್ಕೋ",
+        "ko": "모스크바",
+        "ku": "Moskow",
+        "kv": "Мӧскуа",
+        "kw": "Moskva",
+        "ky": "Москва",
+        "la": "Moscua",
+        "lg": "Moosko",
+        "li": "Moskou",
+        "ln": "Moskú",
+        "lt": "Maskva",
+        "lv": "Maskava",
+        "mg": "Moskva",
+        "mi": "Mohikau",
+        "mk": "Москва",
+        "ml": "മോസ്കോ",
+        "mn": "Москва",
+        "mr": "मॉस्को",
+        "ms": "Moscow",
+        "mt": "Moska",
+        "my": "မော်စကိုမြို့",
+        "na": "Moscow",
+        "nb": "Moskva",
+        "nl": "Moskou",
+        "nn": "Moskva",
+        "no": "Moskva",
+        "oc": "Moscòu",
+        "os": "Мæскуы",
+        "pl": "Moskwa",
+        "ps": "مسکو",
+        "pt": "Moscou",
+        "qu": "Moskwa",
+        "ro": "Moscova",
+        "ru": "Москва",
+        "sc": "Mosca",
+        "se": "Moskva",
+        "sg": "Moscow",
+        "sh": "Moskva",
+        "sk": "Moskva",
+        "sl": "Moskva",
+        "sm": "Moscow",
+        "so": "Moskow",
+        "sq": "Moska",
+        "sr": "Москва",
+        "ss": "Moscow",
+        "st": "Moscow",
+        "su": "Moskwa",
+        "sv": "Moskva",
+        "sw": "Moscow",
+        "ta": "மாஸ்கோ",
+        "te": "మాస్కో",
+        "tg": "Маскав",
+        "th": "มอสโก",
+        "tk": "Moskwa",
+        "tl": "Moscow",
+        "tr": "Moskova",
+        "tt": "Мәскәү",
+        "ty": "Moscou",
+        "ug": "Moskwa",
+        "uk": "Москва",
+        "ur": "ماسکو",
+        "uz": "Moskva",
+        "vi": "Mát-xcơ-va",
+        "vo": "Moskva",
+        "wa": "Moscou",
+        "wo": "Mosku",
+        "yi": "מאסקווע",
+        "yo": "Mọsko",
+        "za": "Moscow",
+        "zh": "莫斯科",
+        "zu": "IMoskwa",
+        "ascii": "Moscow",
+        "feature_name": "Moscow"
+      },
+      "country": null
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 7,
+    "fields": {
+      "name": "Houston",
+      "latitude": 29.7589382,
+      "longitude": -95.3676974,
+      "local_names": {
+        "am": "ሂውስተን",
+        "ar": "هيوستن",
+        "az": "Hyuston",
+        "be": "Х'юстан",
+        "bg": "Хюстън",
+        "bn": "হিউস্টন",
+        "ce": "Хьюстон",
+        "de": "Houston",
+        "el": "Χιούστον",
+        "en": "Houston",
+        "eo": "Hustono",
+        "es": "Houston",
+        "fa": "هیوستون",
+        "fr": "Houston",
+        "gr": "Οὑστωνία",
+        "gu": "હ્યુસ્ટન",
+        "he": "יוסטון",
+        "hi": "ह्युस्टन",
+        "hr": "Houston",
+        "hy": "Հյուստոն",
+        "ja": "ヒューストン",
+        "ka": "ჰიუსტონი",
+        "kk": "Хьюстон",
+        "kn": "ಹ್ಯೂಸ್ಟನ್",
+        "ko": "휴스턴",
+        "ku": "Houston",
+        "kw": "Houston",
+        "la": "Hustonia",
+        "lt": "Hiustonas",
+        "lv": "Hjūstona",
+        "mk": "Хјустон",
+        "ml": "ഹ്യൂസ്റ്റൺ (ടെക്സസ്)",
+        "mr": "ह्युस्टन",
+        "my": "ဟူစတန်မြို့",
+        "ne": "ह्युस्टन",
+        "oc": "Houston",
+        "os": "Хьюстон",
+        "pa": "ਹੂਸਟਨ",
+        "pt": "Houston",
+        "ru": "Хьюстон",
+        "sl": "Houston",
+        "sr": "Хјустон",
+        "ta": "ஹியூஸ்டன்",
+        "te": "హ్యూస్టన్",
+        "th": "ฮิวสตัน",
+        "tl": "Houston",
+        "ug": "Hyuston",
+        "uk": "Х'юстон",
+        "ur": "ہیوسٹن",
+        "uz": "Hyuston",
+        "vi": "Houston",
+        "yi": "היוסטן",
+        "zh": "休斯敦"
+      },
+      "country": null
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 8,
+    "fields": {
+      "name": "Kabul",
+      "latitude": 34.5260109,
+      "longitude": 69.1776838,
+      "local_names": {
+        "af": "Kaboel",
+        "am": "ካቡል",
+        "ar": "كابل",
+        "az": "Kabil",
+        "be": "Кабул",
+        "bg": "Кабул",
+        "bn": "কাবুল",
+        "bo": "ཁ་པུལ།",
+        "br": "Kaboul",
+        "ce": "Кабул",
+        "cs": "Kábul",
+        "cv": "Кабул",
+        "da": "Kabul",
+        "de": "Kabul",
+        "el": "Καμπούλ",
+        "en": "Kabul",
+        "eo": "Kabulo",
+        "es": "Kabul",
+        "et": "Kabul",
+        "eu": "Kabul",
+        "fa": "كابل",
+        "fi": "Kabul",
+        "fr": "Kaboul",
+        "fy": "Kabûl",
+        "ga": "Cabúl",
+        "gl": "Kabul",
+        "gr": "Καβούλη",
+        "he": "קאבול",
+        "hi": "काबुल",
+        "hr": "Kabul",
+        "ht": "Kaboul",
+        "hu": "Kabul",
+        "hy": "Քաբուլ",
+        "id": "Kabul",
+        "is": "Kabúl",
+        "it": "Kabul",
+        "ja": "カーブル",
+        "ka": "ქაბული",
+        "km": "ទីក្រុងកាបូល",
+        "kn": "ಕಾಬುಲ್",
+        "ko": "카불",
+        "ks": "کابل",
+        "ku": "Kabûl",
+        "la": "Cabura",
+        "lb": "Kabul",
+        "lt": "Kabulas",
+        "lv": "Kabula",
+        "mi": "Kapūru",
+        "mk": "Кабул",
+        "ml": "കാബൂൾ",
+        "mn": "Кабул",
+        "mr": "काबुल",
+        "ne": "काबुल",
+        "nl": "Kaboel",
+        "no": "Kabul",
+        "oc": "Kabol",
+        "os": "Кабул",
+        "pa": "ਕਾਬਲ",
+        "pl": "Kabul",
+        "ps": "کابل",
+        "pt": "Cabul",
+        "ru": "Кабул",
+        "sd": "ڪابل",
+        "sk": "Kábul",
+        "sl": "Kabul",
+        "sq": "Kabuli",
+        "sr": "Кабул",
+        "sv": "Kabul",
+        "ta": "காபூல்",
+        "tg": "Кобул",
+        "th": "คาบูล",
+        "tr": "Kâbil",
+        "tt": "Кабул",
+        "ug": "كابۇل",
+        "uk": "Кабул",
+        "ur": "کابل",
+        "vi": "Kabul",
+        "yi": "קאבול",
+        "zh": "喀布尔/喀布爾"
+      },
+      "country": "AF"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 9,
+    "fields": {
+      "name": "Kandahar",
+      "latitude": 31.6205738,
+      "longitude": 65.7157573,
+      "local_names": {
+        "ar": "قندهار",
+        "bn": "কান্দাহার",
+        "cs": "Kandahár",
+        "da": "Kandahar",
+        "de": "Kandahar",
+        "el": "Κανταχάρ",
+        "en": "Kandahar",
+        "es": "Kandahar",
+        "et": "Kandahār",
+        "eu": "Kandahar",
+        "fa": "قندهار",
+        "fr": "Kandahar",
+        "he": "קנדהאר",
+        "hi": "कांधार",
+        "hu": "Kandahár",
+        "hy": "Քանդահար",
+        "ja": "カンダハール",
+        "kn": "ಕಾಂದಹಾರ್",
+        "ko": "칸다하르",
+        "ks": "قندھار",
+        "ku": "Qendehar",
+        "lt": "Kandaharas",
+        "ml": "കന്ദഹാർ",
+        "mr": "कंदहार",
+        "ne": "कान्दाहार",
+        "pa": "ਕਾਂਦਹਾਰ੍",
+        "ps": "کندهار",
+        "ru": "Кандагар",
+        "sd": "قنڌار",
+        "tr": "Kandehar",
+        "tt": "Кәндәһар",
+        "uk": "Кандагар",
+        "ur": "قندھار",
+        "zh": "坎大哈/堪達哈"
+      },
+      "country": "AF"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 10,
+    "fields": {
+      "name": "Herat",
+      "latitude": 34.3508273,
+      "longitude": 62.2164003,
+      "local_names": {
+        "ar": "هيرات",
+        "cs": "Herát",
+        "da": "Herat",
+        "de": "Herat",
+        "el": "Χεράτ",
+        "en": "Herat",
+        "es": "Herāt",
+        "et": "Herāt",
+        "fa": "هرات",
+        "fr": "Hérat",
+        "he": "הראט",
+        "hi": "हेरात",
+        "ja": "ヘラート",
+        "kn": "ಹೆರಾತ್",
+        "ko": "헤라트",
+        "lt": "Heratas",
+        "ml": "ഹെറാത്ത്",
+        "mn": "Херат",
+        "ro": "Herat",
+        "ru": "Герат",
+        "th": "เฮรัต",
+        "tr": "Herat",
+        "uk": "Герат",
+        "yi": "העראַט",
+        "zh": "赫拉特",
+        "zu": "UHerat"
+      },
+      "country": "AF"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 11,
+    "fields": {
+      "name": "Mazar-i-Sharif",
+      "latitude": 36.7090366,
+      "longitude": 67.1114085,
+      "local_names": {
+        "ar": "مزار شريف",
+        "ba": "Мазари-Шәриф",
+        "be": "Мазары-Шарыф",
+        "bg": "Мазари Шариф",
+        "bn": "মাজার-ই-শরীফ",
+        "cs": "Mazár-e Šaríf",
+        "cv": "Мазари-Шариф",
+        "de": "Masar-e Scharif",
+        "el": "Μαζάρι Σαρίφ",
+        "en": "Mazar-i-Sharif",
+        "es": "Mazari Sharif",
+        "et": "Mazār-e Sharīf",
+        "eu": "Mazar-i-Xarif",
+        "fa": "‏مزار شريف",
+        "fr": "Mazâr-e Sharîf",
+        "hi": "मज़ार-ए-शरीफ़",
+        "hu": "Mazari Sharif",
+        "hy": "Մազարի Շարիֆ",
+        "ja": "マザーリシャリーフ",
+        "kk": "Мазари-Шариф",
+        "ko": "마자르이샤리프",
+        "ks": "مزار شریف",
+        "lt": "Mazari Šarifas",
+        "ml": "മസാറി ഷരീഫ്",
+        "os": "Мазари-Шариф",
+        "pa": "ਮਜ਼ਾਰ-ਏ-ਸ਼ਰੀਫ਼",
+        "ps": "مزار شريف",
+        "ru": "Мазари-Шариф",
+        "sr": "Мазари Шариф",
+        "tg": "Мазори Шариф",
+        "tr": "Mezar-ı Şerif",
+        "tt": "Мазары-Шәриф",
+        "uk": "Мазарі-Шаріф",
+        "ur": "مزار شریف",
+        "uz": "Mozori-Sharif",
+        "zh": "马扎里沙里夫"
+      },
+      "country": "AF"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 12,
+    "fields": {
+      "name": "Amsterdam",
+      "latitude": 52.3727598,
+      "longitude": 4.8936041,
+      "local_names": {
+        "am": "አምስተርዳም",
+        "ar": "أمستردام",
+        "ba": "Амстердам",
+        "be": "Амстэрдам",
+        "bg": "Амстердам",
+        "bn": "আমস্টারডাম",
+        "bo": "ཨེམ་སི་ཊར་ཌམ།",
+        "cv": "Амстердам",
+        "de": "Amsterdam",
+        "el": "Αμστελόδαμο",
+        "en": "Amsterdam",
+        "eo": "Amsterdamo",
+        "es": "Ámsterdam",
+        "fa": "آمستردام",
+        "fr": "Amsterdam",
+        "ga": "Amstardam",
+        "gl": "Ámsterdam",
+        "he": "אמסטרדם",
+        "hi": "ऐम्स्टर्डैम",
+        "ht": "Amstèdam",
+        "hu": "Amszterdam",
+        "hy": "Ամստերդամ",
+        "is": "Amsterdam",
+        "it": "Amsterdam",
+        "ja": "アムステルダム",
+        "ka": "ამსტერდამი",
+        "kk": "Амстердам",
+        "kn": "ಆಂಸ್ಟರ್ಡ್ಯಾಮ್",
+        "ko": "암스테르담",
+        "ku": "Amsterdam",
+        "kv": "Амстердам",
+        "la": "Amstelodamum",
+        "lt": "Amsterdamas",
+        "lv": "Amsterdama",
+        "mk": "Амстердам",
+        "ml": "ആംസ്റ്റർഡാം",
+        "mn": "Амстердам",
+        "mr": "अ‍ॅम्स्टरडॅम",
+        "my": "အမ်စတာဒမ်မြို့",
+        "ne": "आम्स्टर्डम",
+        "nl": "Amsterdam",
+        "no": "Amsterdam",
+        "oc": "Amsterdam",
+        "os": "Амстердам",
+        "pl": "Amsterdam",
+        "ps": "امسټرډام",
+        "pt": "Amsterdão",
+        "ru": "Амстердам",
+        "si": "ඈම්ස්ටර්ඩෑම්",
+        "sk": "Amsterdam",
+        "so": "Amistardam",
+        "sq": "Amsterdami",
+        "sr": "Амстердам",
+        "sv": "Amsterdam",
+        "ta": "ஆம்ஸ்டர்டம்",
+        "tg": "Амстердам",
+        "th": "อัมสเตอร์ดัม",
+        "tt": "Амстердам",
+        "ug": "ئامستېردام",
+        "uk": "Амстердам",
+        "ur": "ایمسٹرڈیم",
+        "yi": "אמסטערדאם",
+        "zh": "阿姆斯特丹",
+        "zu": "I-Amsterdami"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 13,
+    "fields": {
+      "name": "Rotterdam",
+      "latitude": 51.9244424,
+      "longitude": 4.47775,
+      "local_names": {
+        "ar": "روتردام",
+        "de": "Rotterdam",
+        "en": "Rotterdam",
+        "eo": "Roterdamo",
+        "es": "Róterdam",
+        "ko": "로테르담",
+        "la": "Roterodamum",
+        "lt": "Roterdamas",
+        "lv": "Roterdama",
+        "mk": "Ротердам",
+        "nl": "Rotterdam",
+        "oc": "Rotterdam",
+        "pt": "Roterdão",
+        "ru": "Роттердам",
+        "sr": "Ротердам",
+        "tt": "Роттердам",
+        "uk": "Роттердам",
+        "zh": "鹿特丹"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 14,
+    "fields": {
+      "name": "The Hague",
+      "latitude": 52.0799838,
+      "longitude": 4.3113461,
+      "local_names": {
+        "ar": "لاهاي",
+        "ca": "La Haia",
+        "da": "Haag",
+        "de": "Den Haag",
+        "el": "Χάγη",
+        "en": "The Hague",
+        "eo": "Hago",
+        "es": "La Haya",
+        "et": "Haag",
+        "fi": "Haag",
+        "fr": "La Haye",
+        "fy": "De Haach",
+        "he": "האג",
+        "hr": "Hag",
+        "it": "L'Aia",
+        "ja": "デン・ハーグ",
+        "la": "Haga",
+        "lt": "Haga",
+        "mk": "Хаг",
+        "nl": "Den Haag",
+        "pl": "Haga",
+        "pt": "A Haia",
+        "ro": "Haga",
+        "ru": "Гаага",
+        "sr": "Хаг",
+        "tt": "Гаага",
+        "uk": "Гаага",
+        "vi": "La Hay",
+        "zh": "海牙"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 15,
+    "fields": {
+      "name": "Utrecht",
+      "latitude": 52.080985600000005,
+      "longitude": 5.12768396945229,
+      "local_names": {
+        "eo": "Utreĥto",
+        "fy": "Utert",
+        "nl": "Utrecht"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 16,
+    "fields": {
+      "name": "Eindhoven",
+      "latitude": 51.4392648,
+      "longitude": 5.478633,
+      "local_names": {
+        "el": "Αϊντχόφεν",
+        "he": "איינדהובן",
+        "la": "Endhovia",
+        "lt": "Eindhovenas",
+        "mk": "Ајндховен",
+        "nl": "Eindhoven",
+        "ru": "Эйндховен",
+        "sr": "Ајндховен",
+        "uk": "Ейндговен",
+        "zh": "埃因霍温"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 17,
+    "fields": {
+      "name": "Tilburg",
+      "latitude": 51.585618749999995,
+      "longitude": 5.066061908648313,
+      "local_names": {
+        "eo": "Tilburgo",
+        "fr": "Tilbourg",
+        "la": "Tillliburgis",
+        "nl": "Tilburg"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 18,
+    "fields": {
+      "name": "Groningen",
+      "latitude": 53.2190652,
+      "longitude": 6.5680077,
+      "local_names": {
+        "ar": "خرونينغن",
+        "de": "Groningen",
+        "en": "Groningen",
+        "eo": "Groningo",
+        "es": "Groninga",
+        "fr": "Groningue",
+        "fy": "Grins",
+        "hu": "Groningen",
+        "it": "Groninga",
+        "ja": "フローニンゲン",
+        "la": "Groninga",
+        "lv": "Groningena",
+        "nl": "Groningen",
+        "pt": "Groningen",
+        "ru": "Гронинген",
+        "sr": "Гронинген",
+        "uk": "Гронінген",
+        "zh": "格罗宁根"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 19,
+    "fields": {
+      "name": "Breda",
+      "latitude": 51.5887845,
+      "longitude": 4.7760237,
+      "local_names": {
+        "fr": "Bréda",
+        "nl": "Breda",
+        "ru": "Бреда",
+        "sr": "Бреда",
+        "uk": "Бреда"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 20,
+    "fields": {
+      "name": "Apeldoorn",
+      "latitude": 52.17957375,
+      "longitude": 5.930077460807249,
+      "local_names": {
+        "eo": "Apeldorno",
+        "la": "Appoldro",
+        "nl": "Apeldoorn"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 21,
+    "fields": {
+      "name": "Nijmegen",
+      "latitude": 51.842574850000005,
+      "longitude": 5.838960628748229,
+      "local_names": {
+        "de": "Nimwegen",
+        "eo": "Nimego",
+        "es": "Nijmegen",
+        "fa": "نیمیخن",
+        "fr": "Nimègue",
+        "fy": "Nymwegen",
+        "la": "Noviomagus Batavorum",
+        "nl": "Nijmegen",
+        "ru": "Неймеген"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 22,
+    "fields": {
+      "name": "Enschede",
+      "latitude": 52.2209855,
+      "longitude": 6.8940537,
+      "local_names": {
+        "ar": "أنسخديه",
+        "de": "Enscheid",
+        "fa": "انسخده",
+        "fy": "Ynskedee",
+        "la": "Enscheda",
+        "nl": "Enschede",
+        "ru": "Энсхеде",
+        "sr": "Енсхеде",
+        "ur": "انسخدئے"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 23,
+    "fields": {
+      "name": "Haarlem",
+      "latitude": 52.383705750000004,
+      "longitude": 4.643559696559635,
+      "local_names": {
+        "eo": "Harlemo",
+        "la": "Harlemum",
+        "nl": "Haarlem"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.location",
+    "pk": 24,
+    "fields": {
+      "name": "Almere",
+      "latitude": 52.3657098,
+      "longitude": 5.2210432,
+      "local_names": {
+        "ar": "آلميره",
+        "el": "Αλμέρε",
+        "fa": "آلمیره",
+        "fy": "Almeare",
+        "la": "Almeria",
+        "lt": "Almerė",
+        "nl": "Almere",
+        "ru": "Алмере",
+        "sr": "Алмере",
+        "uk": "Алмере",
+        "ur": "المیرا"
+      },
+      "country": "NL"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "location": 5,
+      "date_added": "2025-01-12T14:48:09.487Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "location": 6,
+      "date_added": "2025-01-26T15:38:25.714Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "location": 7,
+      "date_added": "2025-01-26T15:40:05.527Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 10,
+    "fields": {
+      "user": 3,
+      "location": 8,
+      "date_added": "2025-02-12T17:34:22.749Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 11,
+    "fields": {
+      "user": 3,
+      "location": 9,
+      "date_added": "2025-02-12T17:34:22.751Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 12,
+    "fields": {
+      "user": 3,
+      "location": 10,
+      "date_added": "2025-02-12T17:34:22.752Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 13,
+    "fields": {
+      "user": 3,
+      "location": 11,
+      "date_added": "2025-02-12T17:34:22.753Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 14,
+    "fields": {
+      "user": 3,
+      "location": 12,
+      "date_added": "2025-02-12T17:34:22.753Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 15,
+    "fields": {
+      "user": 3,
+      "location": 13,
+      "date_added": "2025-02-12T17:34:22.754Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 16,
+    "fields": {
+      "user": 3,
+      "location": 14,
+      "date_added": "2025-02-12T17:34:22.755Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 17,
+    "fields": {
+      "user": 3,
+      "location": 15,
+      "date_added": "2025-02-12T17:34:22.755Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 18,
+    "fields": {
+      "user": 3,
+      "location": 16,
+      "date_added": "2025-02-12T17:34:22.756Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 19,
+    "fields": {
+      "user": 3,
+      "location": 17,
+      "date_added": "2025-02-12T17:34:22.757Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 20,
+    "fields": {
+      "user": 3,
+      "location": 18,
+      "date_added": "2025-02-12T17:34:22.757Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 21,
+    "fields": {
+      "user": 3,
+      "location": 19,
+      "date_added": "2025-02-12T17:34:22.758Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 22,
+    "fields": {
+      "user": 3,
+      "location": 20,
+      "date_added": "2025-02-12T17:34:22.759Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 23,
+    "fields": {
+      "user": 3,
+      "location": 21,
+      "date_added": "2025-02-12T17:34:22.759Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 24,
+    "fields": {
+      "user": 3,
+      "location": 22,
+      "date_added": "2025-02-12T17:34:22.760Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 25,
+    "fields": {
+      "user": 3,
+      "location": 23,
+      "date_added": "2025-02-12T17:34:22.761Z"
+    }
+  },
+  {
+    "model": "weather.userlocation",
+    "pk": 26,
+    "fields": {
+      "user": 3,
+      "location": 24,
+      "date_added": "2025-02-12T17:34:22.763Z"
+    }
+  }
+]

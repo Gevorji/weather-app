@@ -1,0 +1,8 @@
+{% extends 'error_page_base.html' %}
+{% block title_err_msg %}
+	404 Not Found
+{% endblock %}
+{% block body_err_msg %}
+	HTTP 404 Not Found. No such page {{ request_path }}
+{% endblock %}
+

@@ -1,0 +1,31 @@
+FROM python:3.11-alpine
+
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /home/django_app
+
+RUN --mount=type=cache,target=/var/cache/apk apk update && \
+    apk add --virtual build-deps gcc python3-dev musl-dev && \
+    apk add postgresql-dev && \
+    apk del build-deps
+
+RUN --mount=type=cache,target=/root/.cache/pip  \
+    --mount=type=bind,target=.,source=. \
+    pip install .
+
+ENV HOME=/home/django_app
+ENV APP_HOME=/home/django_app/weatherapp
+
+RUN addgroup --system django_app && adduser --system django_app django_app
+
+COPY src/weatherapp ./weatherapp
+
+RUN chown -R django_app:django_app $APP_HOME
+
+USER django_app
+
+ENTRYPOINT ["gunicorn",  "weatherapp.weather_project.wsgi"]
+
+CMD ["--workers=2", "--bind=0.0.0.0:8000"]

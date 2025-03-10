@@ -1,0 +1,50 @@
+{% extends 'weather/weather_base.html' %}
+{% load static %}
+{% block title %}Locations Search{% endblock %}
+{% block page_content %}
+    <section class="container pt-5 gap-3 d-flex flex-column align-items-center">
+        <form action="{% url 'weather:locations' %}" role="search" class="d-flex container-sm" style="max-width: 800px">
+            {{ location_search_form }}
+        </form>
+    {% if messages %}
+        {% include 'includes/messages-block.html' %}
+    {% endif %}
+    <div class="d-flex flex-column w-75" style="min-height: 200px">
+        {% if locations_list %}
+            {% for location in locations_list %}
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex align-items-center align-content-center">
+                        <img 
+                                class="px-4 d-inline" 
+                                src="{% static 'country_flags/' %}{{ location.country|lower }}.svg"
+                                width="96" height="36"
+                        >
+                    </div>
+                    <div class="w-25">
+                        {{ location.name }}<br>
+                        <span class="lh-1" style="font-size: 0.9rem">
+                            &#x1F310 {{ location.latitude|floatformat:4 }}, {{ location.longitude|floatformat:4 }}
+                        </span>
+                    </div>
+                    <div class="w-50 d-flex justify-content-end align-items-center">
+                        <form action="{% url 'weather:locations' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="location" value="{{ forloop.counter0 }}">
+                            <input type="submit" class="btn btn-link" value="Add">
+                        </form>
+                    </div>
+                </div>
+                {% if not forloop.last %}<hr>{% endif %}
+            {% endfor %}
+        {% else %}    
+            <div style="text-align: center">
+                {% if not request.GET and not request.method == 'POST' %}
+                    Enter and submit location that you are interested in
+                {% else %}
+                    No locations were found
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+    </section>
+{% endblock %}

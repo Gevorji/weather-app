@@ -1,0 +1,26 @@
+.wthr-main-bg-color {
+    background-color: #edf7fc;
+}
+
+.wthr-msgs-ul {
+    list-style-type: none;
+    font-size: 0.8rem;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 180px;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
