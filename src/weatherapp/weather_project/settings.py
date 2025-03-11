@@ -103,7 +103,7 @@ LOGIN_REDIRECT_URL = '/'
 class CustomFormRenderer(TemplatesSetting):
     pass
 
-FORM_RENDERER = 'weatherapp.weather_project.dev_settings.CustomFormRenderer'
+FORM_RENDERER = 'weatherapp.weather_project.settings.CustomFormRenderer'
 
 STATIC_URL = 'static/'
 
