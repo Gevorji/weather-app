@@ -27,6 +27,7 @@
 - **Хост, деплой**: Ubuntu + Nginx (прокси-сервер) + gunicorn (сервер приложения) 
 
 <h3 style="text-align: center">Общая схема архитектуры проекта</h3>
+
 ![Architecture diagram](docs/architecture_diagram.png)
 
 ## Деплой и запуск
