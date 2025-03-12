@@ -9,7 +9,7 @@
     {% if messages %}
         {% include 'includes/messages-block.html' %}
     {% endif %}
-    <div class="d-flex flex-column w-75" style="min-height: 200px">
+    <div class="d-flex flex-column w-75" style="min-height: 200px; min-width: 350px">
         {% if locations_list %}
             {% for location in locations_list %}
                 <div class="d-flex flex-row justify-content-center">
@@ -20,7 +20,7 @@
                                 width="96" height="36"
                         >
                     </div>
-                    <div class="w-25">
+                    <div class="w-25" style="min-width: 150px">
                         {{ location.name }}<br>
                         <span class="lh-1" style="font-size: 0.9rem">
                             &#x1F310 {{ location.latitude|floatformat:4 }}, {{ location.longitude|floatformat:4 }}
