@@ -32,7 +32,7 @@ git clone https://github.com/Gevorji/weather-app.git
 - `DJANGO_SECRET_KEY` - [секретный ключ Django](https://docs.djangoproject.com/en/5.1/ref/settings/#std-setting-SECRET_KEY)
 - `DJANGO_ALLOWED_HOSTS` - список адресов разрешенных хостов для данного Django проекта
 - `DJANGO_DEBUG` - переменная, контролирующая DEBUG режим проекта Django, если установлено какое-либо значение,
-режим будет включен
+- `DJANGO_LOG_LEVEL` - [уровень логирования](https://docs.python.org/3/library/logging.html#logging-levels) приложения, по умолчанию установлено значение INFO
 - `POSTGRES_USER` - имя пользователя, который будет создан в Postgresql при запуске контейнера
 - `POSTGRES_PASSWORD` - пароль пользователя, который будет создан в Postgresql при запуске контейнера
 
