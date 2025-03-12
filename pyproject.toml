@@ -1,6 +1,6 @@
 [project]
 name = "weatherapp"
-version = "1.0.2"
+version = "1.0.3"
 description = ""
 authors = [
     {name = "Gevorji",email = "techno9882@gmail.com"}
