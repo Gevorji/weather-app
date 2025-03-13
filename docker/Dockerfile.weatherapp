@@ -22,6 +22,9 @@ RUN addgroup --system django_app && adduser --system django_app django_app
 
 COPY src/weatherapp ./weatherapp
 
+# move django.contrib.admin static files to our static folder to serve admin site properly
+RUN mv $(python -c 'import django;print(django.__path__[0])')/contrib/admin/static/admin weatherapp/static/
+
 RUN chown -R django_app:django_app $APP_HOME
 
 USER django_app
