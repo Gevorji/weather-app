@@ -109,7 +109,7 @@ class LocationsView(LoginRequiredMixin, View):
         logger.debug('%s request for locations with name "%s": '
                      'received %s locations from DB and %s from API (%s were moved as they already in DB)',
                      request.user.username, lname, len(db_locations_list),
-                     len(api_locations_list), len(db_locations_list) - len(api_locations_list))
+                     len(ldtos), location_n_before - len(locations_list))
 
         locations_list.sort(key=lambda m: m.name)
 
