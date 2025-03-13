@@ -90,6 +90,8 @@ class LocationsView(LoginRequiredMixin, View):
             logger.exception('External service error while serving request for %s', request.user.username)
             return render(request, 'weather/locations.html', {'location_search_form': self.location_search_form})
 
+        self._remove_duplicated_locations_from_list(ldtos)
+
         db_locations_list = list(Location.objects.filter(name__icontains=lname))
 
         api_locations_list = [
@@ -98,16 +100,17 @@ class LocationsView(LoginRequiredMixin, View):
                 local_names=dto.local_names, country=dto.country
             )
             for dto in ldtos
-            if (lati_rounder(dto.latitude), longi_rounder(dto.longitude))
-            not in [(lati_rounder(loc.latitude), longi_rounder(loc.longitude)) for loc in db_locations_list]
         ]
+
+        locations_list = api_locations_list + db_locations_list
+        location_n_before = len(locations_list)
+        self._remove_duplicated_locations_from_list(locations_list)
 
         logger.debug('%s request for locations with name "%s": '
                      'received %s locations from DB and %s from API (%s were moved as they already in DB)',
                      request.user.username, lname, len(db_locations_list),
-                     len(api_locations_list), len(db_locations_list) - len(api_locations_list))
+                     len(ldtos), location_n_before - len(locations_list))
 
-        locations_list = api_locations_list + db_locations_list
         locations_list.sort(key=lambda m: m.name)
 
         if not SAVE_LOCATIONS_ONLY_WHEN_ADDED_BY_USER:
@@ -160,6 +163,19 @@ class LocationsView(LoginRequiredMixin, View):
                 del request.session['lately_requested_locations']
 
         return HttpResponseRedirect('/')
+
+    @staticmethod
+    def _remove_duplicated_locations_from_list(locations_list: list):
+        location_identities = [
+            (location.name, lati_rounder(location.latitude), longi_rounder(location.longitude))
+            for location in locations_list
+        ]
+
+        for location in locations_list:
+            ident = (location.name, lati_rounder(location.latitude), longi_rounder(location.longitude))
+            if location_identities.count(ident) > 1:
+                locations_list.remove(location)
+                location_identities.remove(ident)
 
 
 class LocationRemoveView(LoginRequiredMixin, View):
